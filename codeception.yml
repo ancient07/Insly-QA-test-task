@@ -1,0 +1,35 @@
+suites:
+    acceptance:
+        actor: AcceptanceTester
+        path: .
+        modules:
+            enabled:
+                - WebDriver:
+                      host: '192.168.0.93'
+                      url: 'http://google.com'
+                      browser: chrome
+                      port: 4444
+                      window_size: maximize
+                - \Helper\Acceptance
+                - Asserts
+
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+
+params:
+    - env
+
+gherkin: []
+
+# additional paths
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+
+settings:
+    shuffle: false
+    lint: true

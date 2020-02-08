@@ -1,0 +1,17 @@
+{
+  "name": "codeception",
+  "autoload": {
+    "psr-4": {
+      "Codeception\\Extension\\": "codeception-extensions/",
+      "Behat\\Behat\\Context\\": "behat-context/"
+    }
+  },
+  "require": {
+    "codeception/codeception": "^4.0",
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "require-dev": {
+    "codeception/module-webdriver": "^1.0",
+    "codeception/module-asserts": "^1.1"
+  }
+}
