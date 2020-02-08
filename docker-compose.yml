@@ -1,0 +1,32 @@
+version: '3'
+
+networks:
+  app-network:
+
+
+services:
+  codecept:
+      depends_on:
+        - selenium
+      build:
+        context: ./docker/php
+        dockerfile: codecept.docker
+      volumes:
+        - ./tests:/project/tests
+        - ./codeception.yml:/project/codeception.yml
+      restart: 'no'
+      networks:
+        - app-network
+
+  selenium:
+      image: 'selenium/standalone-chrome-debug'
+      volumes:
+        - ./:/data
+      ports:
+        - "4444:4444"
+        - "5900:5900"
+      privileged: true
+      networks:
+        - app-network
+      environment:
+        VNC_NO_PASSWORD: 1
