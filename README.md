@@ -1,4 +1,4 @@
-**Insly test practical exercise**
+**Codeception acceptance tests in docker + chrome debug selenium instance**
 
 **Pre-conditions:**
 - Installed docker
