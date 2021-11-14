@@ -6,11 +6,7 @@ networks:
 
 services:
   codecept:
-      depends_on:
-        - selenium
-      build:
-        context: ./docker/php
-        dockerfile: codecept.docker
+      image: 'codeception/codeception'
       volumes:
         - ./tests:/project/tests
         - ./codeception.yml:/project/codeception.yml
