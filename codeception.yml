@@ -5,7 +5,7 @@ suites:
         modules:
             enabled:
                 - WebDriver:
-                      host: '192.168.0.93'
+                      host: '172.18.94.143'
                       url: 'http://google.com'
                       browser: chrome
                       port: 4444
