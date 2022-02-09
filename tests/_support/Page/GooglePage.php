@@ -37,7 +37,7 @@ class GooglePage
         $I = $this->actor;
         $I->fillField('input[type="text"]', 'insly.com');
         $I->pressKey('input[type="text"]',\Facebook\WebDriver\WebDriverKeys::ENTER);
-        $I->waitForElementVisible('//div[@id="resultStats"]', 5 );
+        $I->waitForElementVisible('//div[@id="result-stats"]', 5 );
     }
 
     public function verifySearch()
@@ -53,7 +53,7 @@ class GooglePage
     {
         $I = $this->actor;
         $I->clickWithLeftButton(Locator::contains('cite', 'insly.com'));
-        $I->waitForElement(Locator::contains('title','Insly - Simple Insurance Software for Brokers and MGAs' ), 5);
+        $I->waitForElement(Locator::contains('title','Insly' ), 5);
     }
 
 
